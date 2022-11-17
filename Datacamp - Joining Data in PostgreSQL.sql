@@ -39,6 +39,15 @@ INNER JOIN economies AS e
 ON c.code = e.code
 AND p.year = e.year;
 
+----INNER JOIN 3
+SELECT c.code, name, region, year, fertility_rate
+  FROM countries AS c
+  INNER JOIN populations AS p
+    ON c.code = p.country_code;
+   INNER JOIN economies AS e
+     ON c.code = e.code
+AND p.year = e.year;
+
 --- Inner join with using
 
 SELECT c.name AS country, continent, l.name AS language, l.official
